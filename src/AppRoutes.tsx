@@ -12,6 +12,7 @@ import CrearActor from "./features/Actores/Componentes/CrearActor";
 import EditarActor from "./features/Actores/Componentes/EditarActor";
 import IndiceActores from "./features/Actores/Componentes/IndiceActores";
 import IndicePeliculas from "./features/peliculas/componentes/IndicePeliculas";
+import FiltrarPeliculas from "./features/peliculas/componentes/FiltrarPeliculas";
 import RutaNoEncontrada from "./Componentes/RutaNoEncontrada";
 
 export default function AppRoutes() {
@@ -33,6 +34,9 @@ export default function AppRoutes() {
             <Route path="/peliculas" element={<IndicePeliculas />} />
             <Route path="/peliculas/crear" element={<CrearPelicula />} />
             <Route path="/peliculas/editar/:id" element={<EditarPelicula />} />
+            <Route path="/peliculas/filtrar" element={<FiltrarPeliculas />} />
+
+
 
             {/* 
              //ruta no encontrada */}

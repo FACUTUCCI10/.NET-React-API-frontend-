@@ -1,7 +1,9 @@
+import Cargando from "./Cargando";
+
 export default function ListadoGenerico<T>(props: ListadoGenericoProps<T>) {
 
     if (!props.listado) {
-        return 'Cargando...';
+        return <Cargando />;
     }
 
     else if (props.listado.length === 0) {
