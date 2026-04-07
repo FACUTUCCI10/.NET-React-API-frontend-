@@ -11,6 +11,9 @@ export default function Menu() {
 
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
+                            <NavLink to="/peliculas/filtrar" className="nav-link">Filtrar Peliculas</NavLink>
+                        </li>
+                        <li className="nav-item">
                             <NavLink to="/generos" className="nav-link">Géneros</NavLink>
                         </li>
                         <li className="nav-item">

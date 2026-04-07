@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Menu from "./features/Home/componentes/Menu";
 import AppRoutes from "./AppRoutes";
 export default function App() {
