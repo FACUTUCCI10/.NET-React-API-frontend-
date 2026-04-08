@@ -10,6 +10,9 @@ export default function EditarGenero() {
     const { id } = useParams();
     const [modelo, setModelo] = useState<GeneroCreacion | undefined>(undefined);
 
+    // useEffect en este archivo simula una llamada HTTP a la base de datos para buscar el género por su ID.
+    // Cuando los datos vuelven asíncronamente (tras 2 seg), el estado 'modelo' se actualiza,
+    // desencadenando el renderizado de nuestro componente 'FormularioGenero' con los datos correctos.
     useEffect(() => {
         const timerId = setTimeout(() => {
             setModelo({ nombre: ' Drama ' + id })
@@ -18,6 +21,9 @@ export default function EditarGenero() {
         return () => clearTimeout(timerId);
     }, [id])
 
+    // onSubmit es la acción a ejecutar cuando el usuario presiona el botón "Enviar".
+    // React-Hook-Form delega en esta constante los datos 'data' ya filtrados y validados para 
+    // que simplemente armemos una petición HTTP (como un método PUT hacia la API).
     const onSubmit: SubmitHandler<GeneroCreacion> = async (data) => {
         console.log("Editando el genero...")
         await new Promise(resolve => setTimeout(resolve, 2000));
