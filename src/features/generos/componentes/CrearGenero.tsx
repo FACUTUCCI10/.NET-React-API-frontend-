@@ -6,6 +6,9 @@ import FormularioGenero from "./FormularioGenero";
 export default function CrearGenero() {
 
 
+    // Ya no necesitamos useEffect para buscar datos previos porque estamos creándolo desde cero.
+    // 'onSubmit' en este caso es equivalente al de Editar, pero su trabajo al contactar a la API
+    // será realizar una petición tipo POST en vez de un PUT, enviando el objeto 'data'.
     const onSubmit: SubmitHandler<GeneroCreacion> = async (data) => {
         console.log("Creando el genero...")
         await new Promise(resolve => setTimeout(resolve, 2000));
