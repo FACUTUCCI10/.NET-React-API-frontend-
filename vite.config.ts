@@ -10,7 +10,8 @@ import react from '@vitejs/plugin-react-swc'
 
 // Define la configuración para Vite de manera tipada.
 export default defineConfig({
-  // Plugins que utiliza Vite para extender sus capacidades. 
-  // En este caso, el plugin de React con SWC para una compilación más rápida.
   plugins: [react()],
+  resolve: {
+    dedupe: ['react', 'react-dom']
+  }
 })

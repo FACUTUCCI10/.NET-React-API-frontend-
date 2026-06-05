@@ -16,7 +16,7 @@ export default function EditarActor() {
     useEffect(() => {
         const timerId = setTimeout(() => {
             // Seteamos el modelo pasados los 1000ms. Al tener los datos, react-hook-form los tomará como defaultValues.
-            setModelo({ nombre: ' Tom Hanks ' + id, fechaNacimiento: ' 1956-07-09 ' });
+            setModelo({ nombre: ' Tom Hanks ' + id, fechaNacimiento: ' 1956-07-09 ', Foto: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/TomHanksPrincEdw031223_%2811_of_41%29_%28cropped%29.jpg/500px-TomHanksPrincEdw031223_%2811_of_41%29_%28cropped%29.jpg' });
         }, 1000);
         return () => clearTimeout(timerId); // Limpiamos el timer si el usuario sale antes de que termine.
     }, [id]);

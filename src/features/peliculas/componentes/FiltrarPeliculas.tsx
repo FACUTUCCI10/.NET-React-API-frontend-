@@ -61,6 +61,7 @@ export default function FiltrarPeliculas() {
                 <div className="col-12">
                     <Boton disabled={isSubmitting} type="submit" className="btn btn-primary">{isSubmitting ? 'Filtrando...' : 'Filtrar'}</Boton>
                     <Boton onClick={() => reset()} className="btn btn-danger ms-2">Limpiar</Boton>
+                    <Boton onClick={() => reset()} className="btn ms" >Cancelar</Boton>
                 </div>
             </form>
         </>
