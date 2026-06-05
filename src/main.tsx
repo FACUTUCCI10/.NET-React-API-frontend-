@@ -10,6 +10,8 @@ import { createRoot } from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.min.css' // Estilos de Bootstrap
 import './index.css' // Estilos globales para la aplicación
 import App from './App.tsx' // Componente principal de la aplicación
+import '../node_modules/leaflet/dist/leaflet.css';
+
 
 // Crea el nodo raíz de React y renderiza el componente App dentro de StrictMode.
 // StrictMode ayuda a identificar problemas potenciales en la aplicación durante el desarrollo.
